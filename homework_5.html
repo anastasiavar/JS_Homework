@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let a = 1, b = 100;
+        let count = 0;
+        alert(`think a number between ${a} and ${b}`);
+
+        while (true) {
+            
+            count++;
+            
+            let c = Math.floor((a + b) / 2);
+
+            let answer = confirm(`Is it ${c}\n\nPress OK if yes, or Cancel otherwise`);
+            
+            if ( count > 7 ) {
+            alert('There is something fishy about your answers...'); 
+            break; }
+
+            if (answer) {
+            alert(`I found the number you were thinking about ${c} in ${count} try(ies)!`); 
+            break; }
+            
+            let larger = confirm(`Is it larget than ${c}\n\nPress OK if yes, or Cancel otherwise`);
+
+            if (larger) {
+                a = c + 1;
+            } else {
+                b = c -1;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz game</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        for (let i = 1; i<=100; i++) {
+
+             console.log(i);
+
+             let divisorThree = i % 3
+
+             let divisorFive = i % 5 
+
+         if ( (divisorFive !== 0) && ( divisorThree === 0 ) ) {
+
+             let i = 'Buzz'
+
+             console.log(i) 
+
+         } else if ( divisorThree !== 0 && divisorFive === 0 ) {
+
+             let i = 'Fizz'
+
+             console.log(i)
+
+         } else {
+
+             let i = 'FizzBuzz'
+
+             console.log(i)
+         }
+        }
+    </script>
+</body>
+</html>
