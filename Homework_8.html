@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 8</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const pinakaki = [];
+
+        while(true) { 
+
+            var input = prompt('Παρακαλώ εισάγετε τσαχπίνικα ονόματα');
+
+            if (input === '' ){
+                break;
+
+            } else {
+
+                pinakaki.push(input);
+            }
+        }
+
+        var didBreak = false; 
+
+        for (let i = 0; i < pinakaki.length - 1; i++) {
+
+           if ( pinakaki[i] > pinakaki[i + 1] ) { 
+                didBreak = true;
+                break;
+           }
+        }
+
+        if (didBreak === true ) {
+            alert('Not sorted')
+        } else {
+            alert('Sorted')
+        }
+
+    </script>
+    </body>
+</html>
